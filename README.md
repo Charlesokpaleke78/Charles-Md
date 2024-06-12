@@ -1,4 +1,4 @@
-# Manjiro Sano md*
+# Charles Md*
 
 <p align="center">
   <a href="https://github.com/Cod3Uchiha">
