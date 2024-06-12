@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/Cod3Uchiha/Manjiro-Sano-md.git  /root/Cod3Uchiha
-WORKDIR /root/Cod3Uchiha/
+RUN git clone https://github.com/Charlesokpaleke78/Charles-Md.git  /root/Charlesokpaleke78
+WORKDIR /root/Charlesokpaleke78/
 
 
 COPY package.json .
