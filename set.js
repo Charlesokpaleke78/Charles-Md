@@ -9,14 +9,14 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined
     : process.env.DATABASE_URL;
 module.exports = { session: process.env.SESSION_ID || 'FLASH-MD-WA-BOT;;;=>',
     PREFIXE: process.env.PREFIX || "+",
-    OWNER_NAME: process.env.OWNER_NAME || "Cod3Uchiha",
-    NUMERO_OWNER : process.env.OWNER_NUMBER || "263785028126", 
+    OWNER_NAME: process.env.OWNER_NAME || "Charles Md",
+    NUMERO_OWNER : process.env.OWNER_NUMBER || "2348033282342", 
              
     AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "yes",
 AUTOREAD_MESSAGES: process.env.AUTO_READ_MESSAGES || "yes",
 CHATBOT: process.env.CHAT_BOT || "yes",
     AUTO_DOWNLOAD_STATUS: process.env.AUTO_DOWNLOAD_STATUS || 'no',
-    BOT : process.env.BOT_NAME || 'FLASH-MD',
+    BOT : process.env.BOT_NAME || 'CHARLES-MD',
     OPENAI_API_KEY : process.env.OPENAI_API_KEY || '',
     URL : process.env.BOT_MENU_LINKS || 'https://static.animecorner.me/2023/08/op2.jpg',
     MODE: process.env.PUBLIC_MODE || "no",
