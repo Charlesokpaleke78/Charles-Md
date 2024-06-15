@@ -21,7 +21,7 @@ france({ nomCom: "fancy", categorie: "Fun", reaction: "☑️" }, async (dest, z
 
     try {
         if (id === undefined || text === undefined) {
-            return await repondre(`\nExample : ${prefixe}fancy 10 Manjiro-Sano-md\n` + String.fromCharCode(8206).repeat(4001) + fancy.list('Manjiro-Sano-md', fancy));
+            return await repondre(`\nExample : ${prefixe}fancy 10 Charles-Md\n` + String.fromCharCode(8206).repeat(4001) + fancy.list('Charles-Md', fancy));
         }
 
         const selectedStyle = fancy[parseInt(id) - 1];
