@@ -36,7 +36,7 @@ async function uploadToTelegraph(Path) {
 
 
 
-france({nomCom:"sticker",categorie: "Conversion", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
+france({nomCom:"s",categorie: "Conversion", reaction: "🔰"},async(origineMessage,zk,commandeOptions)=>{
 
 let {ms,mtype,arg,repondre,nomAuteurMessage}=commandeOptions
   var txt=JSON.stringify(ms.message)
@@ -70,7 +70,7 @@ const alea = (ext) => {
     }
 
     sticker = new Sticker(buffer, {
-      pack:"Manjiro-Sano-md",
+      pack:"Charles-Md",
       author: nomAuteurMessage,
       type:
         arg.includes("crop") || arg.includes("c")
@@ -94,7 +94,7 @@ const alea = (ext) => {
     }
 
     sticker = new Sticker(buffer, {
-      pack:"Manjiro-Sano-md", // pack stick
+      pack:"Charles-Md", // pack stick
       author:  nomAuteurMessage, // name of the author of the stick
       type:
         arg.includes("-r") || arg.includes("-c")
@@ -103,7 +103,7 @@ const alea = (ext) => {
       quality: 40,
     });
   } else {
-    repondre("Please mention an image or video!");
+    repondre("Kisi bhi photo ya 5 seconds ki video ya photo ko mention karo");
     return;
   }
 
@@ -127,10 +127,10 @@ try{
   
 });
 
-france({nomCom:"scrop",categorie: "Conversion", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
+france({nomCom:"scrop",categorie: "Conversion", reaction: "🔰"},async(origineMessage,zk,commandeOptions)=>{
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
-  if(!msgRepondu) { repondre( 'make sure to mention the media' ) ; return } ;
+  if(!msgRepondu) { repondre( 'Check karo yeh photo ya video hai?' ) ; return } ;
   if(!(arg[0])) {
        pack = nomAuteurMessage
   } else {
@@ -144,13 +144,13 @@ mediamsg = msgRepondu.videoMessage
   else if (msgRepondu.stickerMessage) {
     mediamsg = msgRepondu.stickerMessage ;
   } else {
-    repondre('Uh media please'); return
+    repondre('Kisi 5 seconds ki video ya photo ko mention karo'); return
   } ;
 
   var stick = await zk.downloadAndSaveMediaMessage(mediamsg)
 
      let stickerMess = new Sticker(stick, {
-            pack: 'Manjiro-Sano-md,
+            pack: 'Charles-Md',
             
             type: StickerTypes.CROPPED,
             categories: ["🤩", "🎉"],
@@ -163,10 +163,10 @@ mediamsg = msgRepondu.videoMessage
 
 });
 
-france({nomCom:"take",categorie: "Conversion", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
+france({nomCom:"take",categorie: "Conversion", reaction: "🔰"},async(origineMessage,zk,commandeOptions)=>{
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
-  if(!msgRepondu) { repondre( 'make sure to mention the media' ) ; return } ;
+  if(!msgRepondu) { repondre( 'Ap kon se sticker per apna name likhna chahte hai us sticker ko mention karo' ) ; return } ;
   if(!(arg[0])) {
        pack = nomAuteurMessage
   } else {
@@ -180,7 +180,7 @@ mediamsg = msgRepondu.videoMessage
   else if (msgRepondu.stickerMessage) {
     mediamsg = msgRepondu.stickerMessage ;
   } else {
-    repondre('Uh a media please'); return
+    repondre('Sirf photo ya video mention karo bas!'); return
   } ;
 
   var stick = await zk.downloadAndSaveMediaMessage(mediamsg)
@@ -201,21 +201,21 @@ mediamsg = msgRepondu.videoMessage
 
 
 
-france({ nomCom: "write", categorie: "Conversion", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
+france({ nomCom: "types", categorie: "Conversion", reaction: "🔰" }, async (origineMessage, zk, commandeOptions) => {
   const { ms, msgRepondu, arg, repondre, nomAuteurMessage } = commandeOptions;
 
   if (!msgRepondu) {
-    repondre('Please mention an image');
+    repondre('Kisi bhi photo ko mention karo');
     return;
   }
 
   if (!msgRepondu.imageMessage) {
-    repondre('The command only works with images');
+    repondre('Yeh command sirf photos per work karta hai');
     return;
   } ;
   text = arg.join(' ') ;
   
-  if(!text || text === null) {repondre('Make sure to insert text') ; return } ;
+  if(!text || text === null) {repondre('Text msg likho') ; return } ;
  
   
   const mediamsg = msgRepondu.imageMessage;
@@ -252,7 +252,7 @@ france({ nomCom: "write", categorie: "Conversion", reaction: "👨🏿‍💻" }
     // Create the sticker
     const stickerMess = new Sticker(meme, {
       pack: nomAuteurMessage,
-      author: 'Manjiro-Sano-md,
+      author: 'Charles-Md',
       type: StickerTypes.FULL,
       categories: ["🤩", "🎉"],
       id: "12345",
@@ -268,20 +268,20 @@ france({ nomCom: "write", categorie: "Conversion", reaction: "👨🏿‍💻" }
     );
 
   } catch (error) {
-    console.error('Error uploading to Imgur :', error);
-    repondre('An error occurred while creating the meme.');
+    console.error('Imgur Upload nahi ho raha :', error);
+    repondre('Sorry meme nahi ban saki.');
   }
 });
 
 
 
-france({nomCom:"photo",categorie: "Conversion", reaction: "👨🏿‍💻"},async(dest,zk,commandeOptions)=>{
+france({nomCom:"photo",categorie: "Conversion", reaction: "🔰"},async(dest,zk,commandeOptions)=>{
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
-  if(!msgRepondu) { repondre( 'make sure to mention the media' ) ; return } ;
+  if(!msgRepondu) { repondre( 'Kisi sticker ko mention karo' ) ; return } ;
  
    if (!msgRepondu.stickerMessage) {
-      repondre('Um mention a non-animated sticker'); return
+      repondre('Kisi animated sticker ko mention karo'); return
   } ;
 
  let mediaMess = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage);
@@ -298,7 +298,7 @@ france({nomCom:"photo",categorie: "Conversion", reaction: "👨🏿‍💻"},asy
             zk.sendMessage(
               dest,
               {
-                text: 'A non-animated sticker please',
+                text: 'kisi non-animated sticker ko mention karo',
               },
               { quoted: ms }
             );
@@ -314,7 +314,7 @@ france({nomCom:"photo",categorie: "Conversion", reaction: "👨🏿‍💻"},asy
         });
 });
 
-france({ nomCom: "trt", categorie: "Conversion", reaction: "👨🏿‍💻" }, async (dest, zk, commandeOptions) => {
+france({ nomCom: "trt", categorie: "Conversion", reaction: "🔰" }, async (dest, zk, commandeOptions) => {
 
   const { msgRepondu, repondre , arg } = commandeOptions;
 
@@ -324,7 +324,7 @@ france({ nomCom: "trt", categorie: "Conversion", reaction: "👨🏿‍💻" }, 
       
      
 
-       if(!arg || !arg[0]) { repondre('(eg : trt en)') ; return }
+       if(!arg || !arg[0]) { repondre('ap is msg ko kon si language me change karna chahte hai? Jis lanuage me change karna hai us language ke pehle 2 words likho jese language English ke pehle 2 words |en| hai jese language urdu ke pehle 2 words |ur| hai ese aur languages ke bhi hai i hope apko smjh aa gayi hogi ese likho:• trt ur') ; return }
    
 
          let texttraduit = await traduire(msgRepondu.conversation , {to : arg[0]}) ;
@@ -333,13 +333,13 @@ france({ nomCom: "trt", categorie: "Conversion", reaction: "👨🏿‍💻" }, 
 
         } catch (error) {
           
-          repondre('Mention a texte Message') ;
+          repondre('Kisi bhi text msg ko mention karo') ;
       
         }
 
    } else {
      
-     repondre('Mention a texte Message')
+     repondre('Text msg ko mention kare')
    }
 
 
@@ -347,11 +347,11 @@ france({ nomCom: "trt", categorie: "Conversion", reaction: "👨🏿‍💻" }, 
 }) ;
 
 
-france({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
+france({ nomCom: "url", categorie: "General", reaction: "🔰" }, async (origineMessage, zk, commandeOptions) => {
   const { msgRepondu, repondre } = commandeOptions;
 
   if (!msgRepondu) {
-      repondre('mention a image or video');
+      repondre('Kisi photo ko mention karo');
       return;
   }
 
@@ -362,7 +362,7 @@ france({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, asy
   } else if (msgRepondu.imageMessage) {
       mediaPath = await zk.downloadAndSaveMediaMessage(msgRepondu.imageMessage);
   } else {
-      repondre('mention a image or video');
+      repondre('Kisi bhi photo ya image ko mention karo');
       return;
   }
 
