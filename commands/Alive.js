@@ -60,7 +60,7 @@ const date = moment().format('DD/MM/YYYY');
  ${message}
  
  
- *hello,I'm Manjiro-Sano-md,I was Made by Cod3Uchiha*`
+ *hello,I'm Charles-Md,I was Made by Charlesokpaleke*`
 
  if (lien.match(/\.(mp4|gif)$/i)) {
     try {
