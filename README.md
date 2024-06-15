@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/Charlesokpaleke78">
-    <img alt="Charles-Md" height="400" src="https://avatars.githubusercontent.com/u/143913248?v=4">
+    <img alt="Charles-Md" src="https://avatars.githubusercontent.com/u/143913248?v=4">
   </a>
 </p>
 
