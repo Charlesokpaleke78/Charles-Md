@@ -41,7 +41,7 @@
     "BOT_NAME" : {
 
       "description":"Enter your bot's name",
-      "value":"Charles-Md",
+      "value":"Manjiro-Sano-md",
       "required":true
 
     } ,
@@ -140,4 +140,4 @@
       "plan":"heroku-postgresql"
     }
   ]
-}
+     }
